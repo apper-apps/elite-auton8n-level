@@ -1,0 +1,349 @@
+[
+  {
+    "Id": 1,
+    "name": "New Lead to CRM",
+    "description": "Automatically add new leads from contact forms to your CRM system",
+    "category": "CRM",
+    "icon": "UserPlus",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "Form Webhook",
+          "type": "trigger"
+        },
+        {
+          "id": "crm",
+          "name": "Add to CRM",
+          "type": "action"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 2,
+    "name": "Welcome Email Series",
+    "description": "Send a series of welcome emails to new subscribers",
+    "category": "Email",
+    "icon": "Mail",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "New Subscriber",
+          "type": "trigger"
+        },
+        {
+          "id": "email1",
+          "name": "Welcome Email",
+          "type": "action"
+        },
+        {
+          "id": "delay",
+          "name": "Wait 3 Days",
+          "type": "action"
+        },
+        {
+          "id": "email2",
+          "name": "Follow-up Email",
+          "type": "action"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 3,
+    "name": "Database Backup to Cloud",
+    "description": "Automatically backup database to cloud storage daily",
+    "category": "Database",
+    "icon": "Database",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "Daily Schedule",
+          "type": "trigger"
+        },
+        {
+          "id": "backup",
+          "name": "Create Backup",
+          "type": "action"
+        },
+        {
+          "id": "upload",
+          "name": "Upload to Cloud",
+          "type": "action"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 4,
+    "name": "API Status Monitor",
+    "description": "Monitor API endpoints and alert team when services are down",
+    "category": "API",
+    "icon": "Activity",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "5 Minute Schedule",
+          "type": "trigger"
+        },
+        {
+          "id": "check",
+          "name": "Check API Status",
+          "type": "action"
+        },
+        {
+          "id": "condition",
+          "name": "If Down",
+          "type": "action"
+        },
+        {
+          "id": "alert",
+          "name": "Send Alert",
+          "type": "action"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 5,
+    "name": "Social Media Cross-Post",
+    "description": "Post content to multiple social media platforms simultaneously",
+    "category": "Social Media",
+    "icon": "Share2",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "New Post",
+          "type": "trigger"
+        },
+        {
+          "id": "twitter",
+          "name": "Post to Twitter",
+          "type": "action"
+        },
+        {
+          "id": "linkedin",
+          "name": "Post to LinkedIn",
+          "type": "action"
+        },
+        {
+          "id": "facebook",
+          "name": "Post to Facebook",
+          "type": "action"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 6,
+    "name": "Customer Feedback to Slack",
+    "description": "Send customer feedback and reviews to team Slack channel",
+    "category": "CRM",
+    "icon": "MessageSquare",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "New Feedback",
+          "type": "trigger"
+        },
+        {
+          "id": "format",
+          "name": "Format Message",
+          "type": "action"
+        },
+        {
+          "id": "slack",
+          "name": "Send to Slack",
+          "type": "action"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 7,
+    "name": "Abandoned Cart Recovery",
+    "description": "Send reminder emails to customers who abandoned their shopping cart",
+    "category": "Email",
+    "icon": "ShoppingCart",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "Cart Abandoned",
+          "type": "trigger"
+        },
+        {
+          "id": "wait",
+          "name": "Wait 1 Hour",
+          "type": "action"
+        },
+        {
+          "id": "email",
+          "name": "Send Reminder",
+          "type": "action"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 8,
+    "name": "Data Validation Pipeline",
+    "description": "Validate and clean data before importing to database",
+    "category": "Database",
+    "icon": "CheckCircle",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "File Upload",
+          "type": "trigger"
+        },
+        {
+          "id": "validate",
+          "name": "Validate Data",
+          "type": "action"
+        },
+        {
+          "id": "clean",
+          "name": "Clean Data",
+          "type": "action"
+        },
+        {
+          "id": "import",
+          "name": "Import to DB",
+          "type": "action"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 9,
+    "name": "Webhook to Multiple APIs",
+    "description": "Receive webhook and forward data to multiple API endpoints",
+    "category": "API",
+    "icon": "Zap",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "Webhook Received",
+          "type": "trigger"
+        },
+        {
+          "id": "api1",
+          "name": "Call API 1",
+          "type": "action"
+        },
+        {
+          "id": "api2",
+          "name": "Call API 2",
+          "type": "action"
+        },
+        {
+          "id": "api3",
+          "name": "Call API 3",
+          "type": "action"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 10,
+    "name": "Content Approval Workflow",
+    "description": "Route social media content through approval process before posting",
+    "category": "Social Media",
+    "icon": "CheckSquare",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "Content Submitted",
+          "type": "trigger"
+        },
+        {
+          "id": "review",
+          "name": "Send for Review",
+          "type": "action"
+        },
+        {
+          "id": "approved",
+          "name": "If Approved",
+          "type": "action"
+        },
+        {
+          "id": "post",
+          "name": "Schedule Post",
+          "type": "action"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 11,
+    "name": "Lead Scoring System",
+    "description": "Automatically score leads based on their actions and demographics",
+    "category": "CRM",
+    "icon": "TrendingUp",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "Lead Activity",
+          "type": "trigger"
+        },
+        {
+          "id": "calculate",
+          "name": "Calculate Score",
+          "type": "action"
+        },
+        {
+          "id": "update",
+          "name": "Update CRM",
+          "type": "action"
+        },
+        {
+          "id": "notify",
+          "name": "Notify Sales",
+          "type": "action"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 12,
+    "name": "Newsletter Analytics",
+    "description": "Track newsletter performance and send reports to marketing team",
+    "category": "Email",
+    "icon": "BarChart3",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "Newsletter Sent",
+          "type": "trigger"
+        },
+        {
+          "id": "wait",
+          "name": "Wait 24 Hours",
+          "type": "action"
+        },
+        {
+          "id": "analytics",
+          "name": "Get Analytics",
+          "type": "action"
+        },
+        {
+          "id": "report",
+          "name": "Generate Report",
+          "type": "action"
+        }
+      ]
+    }
+  }
+]

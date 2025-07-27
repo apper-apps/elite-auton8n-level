@@ -1,0 +1,289 @@
+[
+  {
+    "Id": 1,
+    "name": "Customer Onboarding Automation",
+    "description": "Automatically send welcome emails and add new customers to CRM when they sign up",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "Webhook Trigger",
+          "type": "trigger",
+          "parameters": {
+            "service": "webhook"
+          }
+        },
+        {
+          "id": "email",
+          "name": "Send Welcome Email",
+          "type": "action",
+          "parameters": {
+            "service": "email"
+          }
+        },
+        {
+          "id": "crm",
+          "name": "Add to CRM",
+          "type": "action",
+          "parameters": {
+            "service": "crm"
+          }
+        }
+      ],
+      "connections": [
+        {
+          "sourceX": 0,
+          "sourceY": 0,
+          "targetX": 200,
+          "targetY": 0
+        },
+        {
+          "sourceX": 200,
+          "sourceY": 0,
+          "targetX": 400,
+          "targetY": 0
+        }
+      ]
+    },
+    "createdAt": "2024-02-10T10:30:00Z",
+    "updatedAt": "2024-02-10T10:30:00Z"
+  },
+  {
+    "Id": 2,
+    "name": "Slack Notification System",
+    "description": "Send Slack notifications when new issues are created in project management tool",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "Project Tool Webhook",
+          "type": "trigger",
+          "parameters": {
+            "service": "webhook"
+          }
+        },
+        {
+          "id": "filter",
+          "name": "Filter High Priority",
+          "type": "action",
+          "parameters": {
+            "service": "filter"
+          }
+        },
+        {
+          "id": "slack",
+          "name": "Send Slack Message",
+          "type": "action",
+          "parameters": {
+            "service": "slack"
+          }
+        }
+      ],
+      "connections": [
+        {
+          "sourceX": 0,
+          "sourceY": 0,
+          "targetX": 200,
+          "targetY": 0
+        },
+        {
+          "sourceX": 200,
+          "sourceY": 0,
+          "targetX": 400,
+          "targetY": 0
+        }
+      ]
+    },
+    "createdAt": "2024-02-08T14:20:00Z",
+    "updatedAt": "2024-02-08T14:20:00Z"
+  },
+  {
+    "Id": 3,
+    "name": "Data Sync Between Systems",
+    "description": "Sync customer data between Google Sheets and Airtable every hour",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "Schedule Trigger",
+          "type": "trigger",
+          "parameters": {
+            "service": "cron"
+          }
+        },
+        {
+          "id": "sheets",
+          "name": "Read Google Sheets",
+          "type": "action",
+          "parameters": {
+            "service": "googleSheets"
+          }
+        },
+        {
+          "id": "transform",
+          "name": "Transform Data",
+          "type": "action",
+          "parameters": {
+            "service": "function"
+          }
+        },
+        {
+          "id": "airtable",
+          "name": "Update Airtable",
+          "type": "action",
+          "parameters": {
+            "service": "airtable"
+          }
+        }
+      ],
+      "connections": [
+        {
+          "sourceX": 0,
+          "sourceY": 0,
+          "targetX": 200,
+          "targetY": 0
+        },
+        {
+          "sourceX": 200,
+          "sourceY": 0,
+          "targetX": 400,
+          "targetY": 0
+        },
+        {
+          "sourceX": 400,
+          "sourceY": 0,
+          "targetX": 600,
+          "targetY": 0
+        }
+      ]
+    },
+    "createdAt": "2024-02-05T09:15:00Z",
+    "updatedAt": "2024-02-05T09:15:00Z"
+  },
+  {
+    "Id": 4,
+    "name": "Invoice Processing Workflow",
+    "description": "Automatically process invoices and update accounting software",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "Email Trigger",
+          "type": "trigger",
+          "parameters": {
+            "service": "email"
+          }
+        },
+        {
+          "id": "extract",
+          "name": "Extract Invoice Data",
+          "type": "action",
+          "parameters": {
+            "service": "ocr"
+          }
+        },
+        {
+          "id": "validate",
+          "name": "Validate Data",
+          "type": "action",
+          "parameters": {
+            "service": "function"
+          }
+        },
+        {
+          "id": "accounting",
+          "name": "Update Accounting",
+          "type": "action",
+          "parameters": {
+            "service": "accounting"
+          }
+        }
+      ],
+      "connections": [
+        {
+          "sourceX": 0,
+          "sourceY": 0,
+          "targetX": 200,
+          "targetY": 0
+        },
+        {
+          "sourceX": 200,
+          "sourceY": 0,
+          "targetX": 400,
+          "targetY": 0
+        },
+        {
+          "sourceX": 400,
+          "sourceY": 0,
+          "targetX": 600,
+          "targetY": 0
+        }
+      ]
+    },
+    "createdAt": "2024-02-03T16:45:00Z",
+    "updatedAt": "2024-02-03T16:45:00Z"
+  },
+  {
+    "Id": 5,
+    "name": "Social Media Scheduler",
+    "description": "Schedule and post content to multiple social media platforms",
+    "jsonData": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "name": "Schedule Trigger",
+          "type": "trigger",
+          "parameters": {
+            "service": "cron"
+          }
+        },
+        {
+          "id": "content",
+          "name": "Get Content",
+          "type": "action",
+          "parameters": {
+            "service": "database"
+          }
+        },
+        {
+          "id": "twitter",
+          "name": "Post to Twitter",
+          "type": "action",
+          "parameters": {
+            "service": "twitter"
+          }
+        },
+        {
+          "id": "linkedin",
+          "name": "Post to LinkedIn",
+          "type": "action",
+          "parameters": {
+            "service": "linkedin"
+          }
+        }
+      ],
+      "connections": [
+        {
+          "sourceX": 0,
+          "sourceY": 0,
+          "targetX": 200,
+          "targetY": 0
+        },
+        {
+          "sourceX": 200,
+          "sourceY": 0,
+          "targetX": 400,
+          "targetY": 0
+        },
+        {
+          "sourceX": 200,
+          "sourceY": 0,
+          "targetX": 400,
+          "targetY": 120
+        }
+      ]
+    },
+    "createdAt": "2024-01-30T11:20:00Z",
+    "updatedAt": "2024-01-30T11:20:00Z"
+  }
+]
