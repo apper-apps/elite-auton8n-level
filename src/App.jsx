@@ -3,8 +3,6 @@ import React, { Component } from "react";
 import "@/index.css";
 import Layout from "@/components/organisms/Layout";
 import Error from "@/components/ui/Error";
-import WorkflowGenerator from "@/components/pages/WorkflowGenerator";
-import WorkflowLibrary from "@/components/pages/WorkflowLibrary";
 import Account from "@/components/pages/Account";
 import Templates from "@/components/pages/Templates";
 import Dashboard from "@/components/pages/Dashboard";
@@ -76,8 +74,6 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<LandingPage />} />
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="generator" element={<WorkflowGenerator />} />
-          <Route path="workflows" element={<WorkflowLibrary />} />
           <Route path="templates" element={<Templates />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="account" element={<Account />} />
